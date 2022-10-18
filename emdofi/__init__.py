@@ -1,6 +1,6 @@
 from .core import (
+    match,
+    DomainFinder,
     CensoredDomain,
     SingleDomain,
-    DomainFinder,
-    match
 )

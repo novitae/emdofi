@@ -145,7 +145,7 @@ class DomainFinder:
                                  if domain.valid is True ]
             
         self.change_censoring_chars(
-            censoring_chars=self.censoring_chars or "*"
+            self.censoring_chars or "*"
         )
         self._x = 0
 

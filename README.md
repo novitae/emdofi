@@ -3,12 +3,12 @@
 
 ---
 ![](./screenshot.png)
-### ⬇️ Installation
+## ⬇️ Installation
 (you can copy the whole line)
 ```py
 git clone https://github.com/novitae/emdofi && cd emdofi && pip install .
 ```
-### 💻 Usage as a command line
+## 💻 Usage as a command line
 `emdofi <domain or email> [-h] [-c CENSORED_CHARS]`
 ```
 usage: EMDOFI - Uncover a censored domain [-h] [-c CC] domain
@@ -20,8 +20,8 @@ options:
   -h, --help            show this help message and exit
   -c CC, --censored CC  The censored characters (default: "*?")
 ```
-### 📚 Usage as a library
-#### `match`
+## 📚 Usage as a library
+### `match`
 This is the simplest action, just making a match, without having to load a lot of stuff.
 ```py
 >>> from emdofi import match
@@ -32,7 +32,7 @@ This is the simplest action, just making a match, without having to load a lot o
 >>> match("*******@c****.c***????**m", censored_chars="*?")
 [cable.comcast.com]
 ```
-#### `DomainFinder`
+### `DomainFinder`
 `DomainFinder` is the main class that will make the whole work. It gets initialized manually this way:
 ```py
 >>> from emdofi import DomainFinder
@@ -82,7 +82,7 @@ Then you can start your matches:
 >>> d.match("g****.**m", full=True)
 {"gmail.com": True, "...": False, "...": False, "gmial.com": True, ...}
 ```
-#### `CensoredDomain`
+### `CensoredDomain`
 In the case you would like to match different domains being censored with differents characters each, you should use `CensoredDomain`
 ```py
 >>> # Make sure the `censored_chars` is a list of string,
@@ -101,7 +101,7 @@ In the case you would like to match different domains being censored with differ
 "g****.**m", ["gmail.com", "gmial.com"]
 "g$)$$.%%m", ["gmail.com", "gmial.com"]
 ```
-#### `SingleDomain`
+### `SingleDomain`
 You can also try to make single matches, using object `SingleDomain`:
 ```py
 >>> import asyncio
