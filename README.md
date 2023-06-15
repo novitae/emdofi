@@ -6,7 +6,7 @@
 ## ⬇️ Installation
 (you can copy the whole line)
 ```py
-git clone https://github.com/novitae/emdofi && cd emdofi && pip install .
+pip install git+https://github.com/novitae/emdofi.git
 ```
 ## 💻 Usage as a command line
 `emdofi <domain or email> [-h] [-c CENSORED_CHARS]`
